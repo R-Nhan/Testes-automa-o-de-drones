@@ -20,5 +20,11 @@ class Mission(Task):
             x=0, y=0, z=self.TAKEOFF_ALTITUDE, frame_id="body", auto_arm=True
         )
 
+        rospy.sleep(2)
+
+        self.drone.navigate_wait(
+            x=2, y=3, z=self.TAKEOFF_ALTITUDE, frame_id="body", auto_arm=True
+        )
+
 
 Mission().run()
