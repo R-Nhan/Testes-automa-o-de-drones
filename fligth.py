@@ -23,7 +23,7 @@ class Mission(Task):
         rospy.sleep(2)
 
         self.drone.navigate_wait(
-            x=2, y=3, z=self.TAKEOFF_ALTITUDE, frame_id="body", auto_arm=True
+            x=-5, y=-5, z=self.TAKEOFF_ALTITUDE, frame_id="body", auto_arm=True
         )
 
 
